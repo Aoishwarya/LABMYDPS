@@ -1,0 +1,10 @@
+clc;
+clear all;
+x1=[2 1 2 1];
+x2=[1 2 3 4];
+X1=ddft(x1);
+X2=ddft(x2);
+X1X2=X1.*X2;
+disp('Circular Convolution using DFT');
+X3=abs(iidft(X1X2));
+disp(X3);
